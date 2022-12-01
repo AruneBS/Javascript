@@ -112,3 +112,57 @@ console.log(modifikuotasStringas.replaceAll('sit', 'blablabla'));
 const randomSkaicius = rand(5, 150);
 
 console.log('Atsitiktinis skaicius:', randomSkaicius);
+
+//5 uzduotis
+
+const skaicius1 = rand (0, 2);
+const skaicius2 = rand (0, 2);
+const skaicius3 = rand (0, 2);
+const skaicius4 = rand (0, 2);
+
+let nuliai = 0;
+let vienetai = 0;
+let dvejetai = 0;
+
+if(skaicius1 === 0)
+    nuliai++;
+
+if(skaicius2 === 0)
+    nuliai++;
+
+
+if(skaicius3 === 0)
+    nuliai++;
+
+if(skaicius4 === 0)
+    nuliai++;
+
+if(skaicius1 === 1)
+    vienetai++;
+
+if(skaicius2 === 1)
+    vienetai++;
+
+
+if(skaicius3 === 1)
+    vienetai++;
+
+if(skaicius4 === 1)
+    vienetai++;
+
+if(skaicius1 === 2)
+    dvejetai++;
+
+if(skaicius2 === 2)
+    dvejetai++;
+
+
+if(skaicius3 === 2)
+    dvejetai++;
+
+if(skaicius4 === 2)
+    dvejetai++;
+
+
+console.log('Gauti skaiciai:' , skaicius1, skaicius2, skaicius3, skaicius4);
+console.log('Gauti rezultatai:' , nuliai, vienetai, dvejetai);
