@@ -16,6 +16,8 @@ const floor = Math.floor(skaicius); //suapvalina i mazesni artimiausia skaiciu
         // console.log(floor);
 const ceil =Math.ceil(skaicius);// suapvalina i didesni  artimiausia skaiciu
         // console.log(ceil);
+const poKablelio = skaicius.toFixed(3)
+        console.log(poKablelio)
 
         const x = 1
         const y = 101
@@ -27,7 +29,15 @@ const ceil =Math.ceil(skaicius);// suapvalina i didesni  artimiausia skaiciu
     console.log('Didziausias skaicius', Math.min(x, y, z, w));
 
 
-const stringas = 'Lorem ipsum dolor sit amet consectetur';
+
+let stringas = '    Lorem  ipsum  dolor sit amet consectetur ';
+
+//trim() panaikina tuscius nereikalingus tarpus
+
+
+stringas = stringas.trim();
+console.log(stringas);
+
 
 if(stringas.startsWith('Lorem'))
 console.log('Stringas prasideda nuo Lorem');
@@ -62,6 +72,26 @@ console.log('Stringas baigiasi nuo consectetur');
 result = stringas.substring(stringas.length -3)
 
 console.log(result);
+
+// includes() funkcija
+
+
+if(stringas.includes('dolor'))
+console.log('Zodis dolor yra stringe');
+
+// index() funkcija parodo ieskomos frazes pozicija
+
+result = stringas.indexOf('dolor');
+console.log(result);
+
+// toLowerCase raidziu konvertavimas i mazasias raide arba i didziasas raides 
+
+result = stringas.toLowerCase();
+console.log(result);
+
+result = stringas.toUpperCase()
+console.log(result)
+
 
 
 
