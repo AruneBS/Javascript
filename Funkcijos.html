@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcijos</title>
+</head>
+<body>
+    <script>
+        let result = '';
+        const skaicius = Math.random(); //Sugeneruoja atsistiktini skaiciu nuo 0-1, po kablelio
+        const round = Math.round(skaicius); //
+        // console.log(round);
+const floor = Math.floor(skaicius); //suapvalina i mazesni artimiausia skaiciu
+        // console.log(floor);
+const ceil =Math.ceil(skaicius);// suapvalina i didesni  artimiausia skaiciu
+        // console.log(ceil);
+
+        const x = 1
+        const y = 101
+        const z =1089
+        const w = 2
+
+
+    console.log('Didziausias skaicius', Math.max(x, y, z, w));
+    console.log('Didziausias skaicius', Math.min(x, y, z, w));
+
+
+const stringas = 'Lorem ipsum dolor sit amet consectetur';
+
+if(stringas.startsWith('Lorem'))
+console.log('Stringas prasideda nuo Lorem');
+
+if(stringas.startsWith('ipsum', 6))
+console.log('Stringas prasideda nuo ipsum');
+
+// Tikrinam ar stringas baigiasi ivardinta fraze
+
+if(stringas.endsWith('consectetur'))
+console.log('Stringas baigiasi nuo consectetur');
+
+
+
+// Simbolio paemimas is stringo pagal 6 pozicija
+
+// result = stringas.charAt(6);
+// console.log(result); //raide i
+
+
+// result = stringas[6] + stringas[10] + stringas[13];
+
+//Triju paskutiniu simboliu paemimas
+// result = stringas.charAt(35) + stringas.charAt(36) + stringas.charAt(37)
+
+// console.log(result);
+
+// result = stringas[stringas.length -3] +  stringas[stringas.length -2] + stringas[stringas.length -1]
+
+//Triju paskutiniu simboliu paemimas naudojant substring()
+
+result = stringas.substring(stringas.length -3)
+
+console.log(result);
+
+
+
+  </script>
+
+  <p>Lorem ipsum dolor sit amet consectetur.</p>
+</body>
+</html>
