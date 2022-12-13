@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function rand(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+      }
+
+    let i = 0;
+
+
+      while(i < 10){
+      console.log('Eilutes numeris' , i);
+      i++;
+      }
+
+      const stringas = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ad harum, maiores ducimus molestiae odio quibusdam facilis?'
+
+      i=0;
+      while(i < stringas.length){
+        console.log(stringas[i]);
+        i++
+      }
+
+      //For ciklas
+
+      console.log('For ciklo inkrementai:');
+
+      for(let x= 0; x < 10; x++) {
+        console.log('Eilutes numeris', x);
+      }
+
+      console.log('Dekrementai:');
+
+      for(let x = 10; x > 0; x--){
+        console.log('Eilutes numeris:', x)
+      }
+
+    //   Ciklas cikle
+
+   
+
+    const treciasMasyvas = [];
+
+    for(let i = 0; i< 30; i++) {
+        treciasMasyvas[i]= rand(5, 25)
+    }
+console.log(treciasMasyvas);
+
+
+
+    </script>
+
+</body>
+</html>

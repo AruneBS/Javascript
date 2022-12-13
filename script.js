@@ -13,7 +13,7 @@ console.log('Pirmoji gauta reiksme: ' + x);
 
 // x = 15;
 
-// console.log(x)
+// console.log(x) 
 
 let y=15
 

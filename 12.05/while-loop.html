@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function rand(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+      }
+
+let i = 0; 
+let x = 0;
+
+      while(i <10){  //Kad ciklas prasisuktu 10 kartu.
+        console.log('Ciklas sukasi');
+        x += 11;
+        i++;
+      }
+
+         console.log('Gautas rezultatas:', x);
+
+
+         //Ciklo sustabdymas
+        i = 0 ;
+
+      while(true){
+        if(i === 10){
+          break;
+        }
+        i ++
+      }
+      console.log('Ciklas buvo prasuktas:', + i + ' kartu');
+
+
+      // Ciklo praleidimas
+      i = 0;
+
+      while(true){
+        i++;
+        if(i === 10){
+          break;
+        }
+        if(i % 2 === 0){
+          console.log(i % 2);
+          continue;
+        }
+
+      }
+
+      // Do while ciklas
+i = 0
+      do{
+console.log('dabartinis ciklas:', i);
+i++;
+      } while(false);
+
+      //Uzduotis
+
+
+      
+
+      // // 2022-12-06
+
+      // let i = 0;
+      // while(i<10){
+      //   consoloe.log('Eilutes numeris', i)
+      //   i++
+      // }
+
+
+    </script>
+</body>
+</html>
