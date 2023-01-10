@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -15,12 +22,22 @@
 //innerHTML savybe leidzia prideti html turini i elementa
 
 
-document.getElementById('app').innerHTML += '<h2>Dinamiskai integruotas turinys</h2>';
+document.getElementById('app').innerHTML += '<h2>Dinamiškai integruotas turinys</h2>';
 document.getElementById('app').innerHTML += '<h3>Dinamiskai prideta eilute</h3>';
+// console.log(document.getElementById('app').innerHTML);
 
-document.getElementById('app').innerText = '<h1>Naudojames innerText savybe</h1>';
-document.getElementById('app').textContenr = '<h1>Naudojames innerText savybe</h1>';
+// document.getElementById('app').innerText = '<h1>Naudojames innerText savybe</h1>';
+// .textContect greičiau veikianti alternatyva teksto pridėjimui
+// document.getElementById('app').textContent = '<h1>Naudojames innerText savybe</h1>';
 
+
+document.getElementById('app').innerHTML= '<div class="box"></div>';
+
+document.getElementById('app').querySelector('.box').textContent = 'Labanaktis';
+
+document.querySelector('#app .box').textContent = 'Eik miegoti';
+
+document.querySelector('body').innerHTML = 'Eik miegoti';
 
 
  </script>   

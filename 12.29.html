@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+
+        const atnesk =(url) => new Promise((resolve , reject) => {
+            const tikimybe = rand(0, 1);
+        setTimeout(() => {
+            if(tikimybe === 1) {
+                ivykdyta('Pazadas ivykdytas');
+            } else {
+                neivykdytas('Uzklausa neivyko');
+            }
+        }, 2000);
+        })
+
+console.log('Kodo pradzia');
+
+        // console.log(pazadas)
+
+        const infromacija = async => {
+            try{
+            const atsakymas = await.atnesk ('https://google.com');
+            console.log(atsakymas);
+            console.log('Kodo pabaiga');
+        } catch(klaida) {
+            console.log(klaida);
+        }
+    }
+    </script>
+</body>
+</html>

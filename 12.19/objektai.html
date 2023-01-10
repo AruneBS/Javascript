@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Objektai 12-19</title>
 </head>
+
 <body>
     <script>
+
+
         const person = {
             name: 'Peter',
             surname: 'Smith',
             likes: ['Begiojimas', 'Skaitymas', 'Dviračiai'],
-            getName function(){
-                
+            //    hello: function(text){
+            //        return 'Hello ' +  text ;
+            //     }
+            getName:function() {
+                // console.log(this)
+                return this.name;
+            },
+            setName:function(name) {
+                this.name = name;
+                return 'Naujas vardas yra: ' + this.name;
             }
+
+
         }
+
+        console.log(person.name.toUpperCase());
+        console.log(person.surname);
+        // console.log(person.hello('Peter'));
+        console.log(person.likes.join(', '));
+
+        person.name = 'Jhon';
+        console.log(person.getName());
+        console.log(person.setName('Adam'));
+        person.name = 'Lauren';
+        console.log(person);
+
     </script>
 </body>
+
 </html>
