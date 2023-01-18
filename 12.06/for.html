@@ -1,63 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for ciklas</title>
+  <style>
+    body {
+      line-height: 8px;
+    }
+  </style>
 </head>
+
 <body>
-<script>
-function rand(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
-      }
+  <script>
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+    }
 
     let i = 0;
 
 
-      while(i < 10){
-      console.log('Eilutes numeris' , i);
+    while (i < 10) {
+      console.log('Eilutes numeris', i);
       i++;
-      }
+    }
+    // Ciklo pagalba paimame visas raides is stringo kiekvienos interacijos metu.
+    const stringas = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ad harum, maiores ducimus molestiae odio quibusdam facilis?'
+    i = 0;
+    while (i < stringas.length) {
+      console.log(stringas[i]);
+      i++
+    }
+    console.log(stringas.length);
 
-      const stringas = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ad harum, maiores ducimus molestiae odio quibusdam facilis?'
 
-      i=0;
-      while(i < stringas.length){
-        console.log(stringas[i]);
-        i++
-      }
+    //For ciklas
 
-      //For ciklas
+    console.log('For ciklo inkrementai:');
 
-      console.log('For ciklo inkrementai:');
+    for (let x = 0; x < 10; x++) {
+      console.log('Eilutes numeris', x);
+    }
 
-      for(let x= 0; x < 10; x++) {
-        console.log('Eilutes numeris', x);
-      }
+    console.log('Dekrementai:');
 
-      console.log('Dekrementai:');
-
-      for(let x = 10; x > 0; x--){
-        console.log('Eilutes numeris:', x)
-      }
+    for (let x = 10; x > 0; x--) {
+      console.log('Eilutes numeris:', x)
+    }
 
     //   Ciklas cikle
 
-   
+    for (let x = 0; x < 10; x++) {
+      for (let i = 0; i < 5; i++) {
+        console.log('x')
+      }
+      console.log('y')
+    }
+
+    i = 5
+    while (i > 0) {
+      console.log('Eilutes numeris:', i);
+
+      let x = 0;
+      while (x < 5) {
+        console.log('Vidines eilutes numeris:', x);
+        x++;
+      }
+      i--;
+    }
+    // Uzduotis 
+
+    //Nupieškite kvadratą iš “*”, kurio kraštines sudaro 100 “*”. Panaudokite css stilių, 
+    // kad kvadratas ekrane atrodytų kvadratinis.
+    const size = 25;
+    let result = '';
+
+    for (let y = 1; y <=size; y++) {
+      for (let x =1; x <= size; x++) {
+        if (y === x || x === (size - y) + 1) {
+          result += '<span style= "color: red">*</span>';
+        } else {
+          result += '*';
+        }
+      }
+      result += '<br />';
+
+    }
+    document.write(result);
+
+
+
+
+
+
+
+
+
+
+
 
     const treciasMasyvas = [];
 
-    for(let i = 0; i< 30; i++) {
-        treciasMasyvas[i]= rand(5, 25)
+    for (let i = 0; i < 30; i++) {
+      treciasMasyvas[i] = rand(5, 25)
     }
-console.log(treciasMasyvas);
+    console.log(treciasMasyvas);
 
 
 
-    </script>
+  </script>
 
 </body>
+
 </html>

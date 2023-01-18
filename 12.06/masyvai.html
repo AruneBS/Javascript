@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masyvas</title>
+</head>
+<body>
+    <script>
+        function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+const masyvas = ['Labas Pasauli', 10, false, null, 15, 20];
+console.log(masyvas);
+
+
+const products = ['Telvizorius LG', 'UAB HD51651', 600.99, 1];
+
+//Multimencinis masyvas
+const multipleProducts = [
+['Telvizorius LG', 'UAB HD51651', 600.99, 1],
+['Telvizorius LG', 'UAB HD51651', 600.99, 1],
+['Telvizorius LG', 'UAB HD51651', 600.99, 1],
+
+]
+console.log(multipleProducts[0]);
+
+console.log(multipleProducts[0].length);
+
+// Istrynimas is masyvo
+delete multipleProducts[0];
+
+console.log(multipleProducts);
+
+multipleProducts[1] = 'Dabar elementas tapo stringu';
+
+console.log(multipleProducts);
+
+const skaiciai = [rand(0, 100), rand(0, 100), rand(0, 100)];
+for(let i = 0; i< 100; i++){
+    skaiciai[i] = rand(0, 100);
+}
+console.log(skaiciai);
+
+let total = 0;
+let excludedTotal = 0;
+let number = 0
+
+for(let i = 0; i < skaiciai.length; i++){
+    total += skaiciai[i];
+    if (skaiciai[i] > 10 && skaiciai[i]  < 90){
+excludedTotal += skaiciai[i];
+number++;
+    }
+}
+console.log('Vidurkis: ' , (total/skaiciai.length).toFixed(2));
+console.log('Vidurkis atmetus reiksmes: ' , (excludedTotal/number).toFixed(2));
+
+    </script>
+</body>
+</html>
