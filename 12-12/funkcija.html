@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+
+    function sudetis(a, b, c){
+
+//         // console.log('Funkcijoje gauti parametrai:' , a,b,c)
+//    return a + b + c;
+   
+    }
+ const x =10;
+ const z = 20;
+ const y = 30;
+
+
+  let res = sudetis(x, z, y);
+
+   console.log('Rezultatas;', res);
+
+
+//    sugeneruokit 300 atsitiktiniu stringu
+
+
+
+// res= [] ;
+
+// function generateString(){
+// let stringas = 'abscdefghtijklmnoprstuvwxyz';
+// let number1 = rand(0, stringas.length - 1);
+// let number2 = rand(0, stringas.length - 1);
+// let number3 = rand(0, stringas.length - 1);
+
+// return stringas[number1] + stringas[number2] + stringas[number3];
+// }
+
+// for(let i =0; i < 300; i++){
+// res[res.length] = generateString();
+// }
+// console.log(res);
+
+
+function showParams(a,b,c = 'Pagal nutylejima'){
+console.log(a[0], b, c)
+}   
+
+showParams(['Test'], 'Test', 'Pakeista reiksme pagal nutylejima');
+
+
+let array = ['reiksme', 'ziema', 'kaledos'];
+
+function push(...values) {
+    for(let i = 0; i < values.length; i++){
+        array[array.length] = values[i];
+
+    }
+return array.length;
+}
+push('Test', 10, [], 50, 'Kitas testas')
+
+console.log(array)
+
+
+
+function map(arr, clb){
+    for(let i = 0; i < array.length; i++){
+        console.log('test')
+    }
+}
+
+// map(array, customCallback);
+array.map()
+
+
+
+</script> 
+</body>
+</html>

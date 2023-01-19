@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Arrow Function
+
+
+        const pirmaFunkcija = (a, b, c)  => {
+            console.log(a, b, c)
+        }
+
+        pirmaFunkcija(10, 20, 30);
+
+        const array = [10, 20, 30];
+
+        array.map((value) =>{
+            console.log(value);
+        });
+
+        array.map(value =>{
+            console.log(value);
+        });
+
+        array.map(value =>console.log(value));
+
+        //Naujo masyvo formavimas
+
+        const newArray = array.map(value => {
+            return value + 1;
+        });
+        console.log(newArray);
+
+
+        const addOne = array.map(value => value + 1);
+        console.log(addOne);
+
+
+        array.map(() => console.log('Tekstas'));
+
+        array.map((value, index) => console.log(value, index));
+
+
+        //Filter metodas
+
+        const filteredArray = [];
+
+        for(let i=0; i <array.length; i ++) {
+            if(array[i] >10)
+            filteredArray[filteredArray.length] = array[i];
+        }
+
+        array.filter()
+    </script>
+</body>
+</html>

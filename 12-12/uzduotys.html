@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+let kazys = 0;
+let petras = 0;
+
+while(true) {
+    let kazio_taskai = rand(5, 25);
+    let petro_taskai = rand(10, 20);
+    let laimetojas = '';
+
+    kazys += kazio_taskai;
+    petras += petro_taskai;
+
+    if(kazio_taskai > petro_taskai) {
+        laimetojas = 'Kazys';
+    } else {
+        laimetojas = 'Petras';
+    }
+
+    console.log('Kazys:', kazio_taskai, 'Petras:', petro_taskai, 'Partija laimejo:', laimetojas);
+
+    if(kazys >= 222 || petras >= 222);
+    break;
+}
+    </script>
+</body>
+</html>
