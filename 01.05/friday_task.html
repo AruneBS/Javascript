@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+        }
+const grauztukai = new Map();
+
+
+        class Vaisius {
+            constructor() {
+
+                this.dydis = rand(5, 25);
+                this.id = rand(1000000, 9999999);
+                this.prakastas = false;
+
+            }
+
+            prakasti() {
+                this.prakastas = true;
+                return this;
+
+            }
+        }
+        const fruits = new Vaisius
+        console.log(fruits.prakasti());
+
+
+
+        class Krepšys {
+            static vaisiai = [];
+
+
+            static pripildyti() {
+
+                for (let i = 0; i < 20; i++) {
+                    this.vaisiai[i] = new Vaisius;
+                }
+
+                this.vaisiai.sort((a, b) => b.dydis-a.dydis);
+            }
+           
+            static isimti(){
+                let isimtasVaisius =Krepšys.vaisiai.shift();
+
+             return isimtasVaisius;
+            }
+
+}
+
+
+
+
+
+        
+
+
+        Krepšys.pripildyti();
+        console.log('Pripildytas vaisių krepšys:' , Krepšys.vaisiai);
+        
+        console.log('Išimtas iš vaisių krepšio didžiausias vaisius:' , Krepšys.isimti());
+        Krepšys.isimti();
+        console.log('Išėmus iš vaisių krepšio didžiausią vaisių:' , Krepšys.vaisiai);
+
+        Krepšys.pripildyti();
+        console.log('Pripildytas vaisių krepšys:' , Krepšys.vaisiai);
+
+
+        
+
+    </script>
+</body>
+
+</html>
