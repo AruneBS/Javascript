@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+        }
+        //inkapsuliacija
+
+
+        class Cars {
+            durys = 15;
+            static veidrodeliai = 3;
+
+            constructor(vairas, langai) {
+                ;
+                this.vairas = vairas;
+                this.langai = langai;
+
+
+            }
+            ratai() {
+                return 'Vasariniai ratai';
+            }
+            getVairas() {
+                return 'Vairas automobilyje yra: ' + this.vairas;
+            }
+
+            setVairas(kiekis) {
+                this.vairas = kiekis;
+                this.langai = 20;
+                return this;
+            }
+
+            setProperties(vairas, langai) {
+                this.vairas = vairas;
+                this.langai = langai;
+
+                return this;
+            }
+            kede(number) {
+                this.kede = []
+                for (let i = 1; i <= number; i++) {
+                    this.kede.push('Kede ' + i);
+                }
+                return this;
+            }
+
+            // setLangai(kiekis){
+            //     this.langai = kiekis
+            //     return this;
+            // }
+
+            //             get Vairas(){
+            // return 'Vairas automobilyje yra: ' + this.vairas;
+            //             }
+        }
+        const auto = new Cars(1, 6);
+        console.log(auto);
+
+        auto.setVairas(10);
+
+        console.log(auto);
+        auto.setVairas(12);
+        console.log(auto.setVairas(12).getVairas());
+        console.log(auto);
+        console.log(auto.setProperties(26, 46));
+        console.log(auto.kede(4));
+        for (let i = 1; i <= 10; i++) {
+            const car = new Cars(rand(0, 5), rand(0, 8));
+            console.log(car)
+        }
+        console.log(Cars.veidrodeliai);
+
+
+        class StatineKlase {
+            static operation = 'add';
+
+
+            static math(a, b) {
+                return a + b
+            }
+            static url = 'http://api.google.com/';
+        }
+        StatineKlase.operation = 'divide';
+
+        console.log(StatineKlase.operation);
+        console.log(StatineKlase.math(5, 3));
+        console.log(StatineKlase.url);
+
+        class Traktoriai extends Cars {
+            ratuDydis = 250;
+constructor(){
+    super(10, 20);
+   delete this.vairas;
+
+}
+        }
+        const traktoriai = new Traktoriai();
+console.log(traktoriai.kede(6));
+console.log(new Cars(5, 20));
+
+class Salonas{
+    car = [];
+    constructor(){
+        for(let i = 0; i < 100; i++){
+            this.car.push(new Cars(rand(0, 10)));
+        }
+
+    }
+}
+const salonas = new Salonas();
+
+console.log(salonas.car[6]);
+
+class DeveloperA{
+    static #privateStaticProperty = 'Privati statine savybe';
+    constructor(){
+        console.log(DeveloperA.#privateStaticProperty);
+    }
+
+    #privateProperty = 'Privati savybe';
+
+    publicMethod(){
+        return 'Šis metodas yra viešas'
+    }
+    #privateMethod(){
+        return 'Šis metodas yra privatus'
+    }
+}
+class DeveloperB extends DeveloperA{
+constructor(){
+    super();
+    console.log(this.publicMethod());
+    
+}
+}
+const devB = new DeveloperB();
+
+console.log(devB);
+    </script>
+</body>
+
+</html>

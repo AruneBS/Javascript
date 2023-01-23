@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Televizorius {
+            constructor(gamintojas, kanalas  = 1, garsas = 50){
+
+            this.gamintojas = gamintojas;
+            this.kanalas = kanalas;
+            this.garsas = garsas;
+        }
+
+        setGarsas(lygis) {
+            if(lygis < 0 || lygis > 100) return;
+            this.garsas = lygis;
+            return this;
+        }
+
+
+
+        setKanalas(numeris){
+            this.kanalas =  (numeris> 50 || numeris) ? 1 : numeris;
+            return this;
+        }
+
+        setAtstatymas(){
+            this.kanalas = 1;
+            this.garsas = 50;
+            return this;
+        }
+
+        dabartiniaiNustatymai(){
+            return `Televizorius '${this.gamintojas}' šiuo metu rodo '${this.kanalas}' ir jo garsas '${this.garsas}'`;
+        }
+    }
+
+
+   const tv = new Televizorius ('Sony');
+   console.log('Įjungiam televizorių' , tv);
+
+   tv.setGarsas(78);
+   console.log('Keičiam garsą', tv);
+
+   tv.setKanalas(4);
+   console.log('Įsijungiam kanalą' , tv);
+
+
+
+   console.log(tv.dabartiniaiNustatymai());
+
+   console.log(tv.setGarsas(40).setKanalas(4).setAtstatymas().dabartiniaiNustatymai());
+    </script>
+</body>
+</html>
